@@ -10,34 +10,49 @@ Item {
         }
 
         Label {
-            text: "Colors"
+            text: "Basic colors"
         }
         Flow {
             width: parent.width
             spacing: 8
             Repeater {
-                model: [
-                    {name: "basic-1", data: AntTheme.palette.basic[1]},
-                    {name: "basic-2", data: AntTheme.palette.basic[2]},
-                    {name: "basic-3", data: AntTheme.palette.basic[3]},
-                    {name: "basic-4", data: AntTheme.palette.basic[4]},
-                    {name: "basic-5", data: AntTheme.palette.basic[5]},
-                    {name: "basic-6", data: AntTheme.palette.basic[6]},
-                    {name: "basic-7", data: AntTheme.palette.basic[7]},
-                    {name: "basic-8", data: AntTheme.palette.basic[8]}
-                ]
+                model: 13
                 delegate: Rectangle{
                      width: 50
                      height: 50
                      radius: 3
-                     color: modelData.data
+                     color: AntTheme.palette.basic[modelData + 1]
                      MouseArea{
                         id: mouseArea
                         anchors.fill: parent
                         hoverEnabled: true
                      }
                      ToolTip.visible: mouseArea.containsMouse
-                     ToolTip.text: modelData.name
+                     ToolTip.text: "basic-" + (modelData + 1)
+                }
+            }
+        }
+
+        Label {
+            text: "Red accent"
+        }
+        Flow {
+            width: parent.width
+            spacing: 8
+            Repeater {
+                model: 10
+                delegate: Rectangle{
+                     width: 50
+                     height: 50
+                     radius: 3
+                     color: AntTheme.darkTheme ? AntTheme.palette.redDark[modelData + 1] : AntTheme.palette.red[modelData + 1]
+                     MouseArea{
+                        id: mouseArea
+                        anchors.fill: parent
+                        hoverEnabled: true
+                     }
+                     ToolTip.visible: mouseArea.containsMouse
+                     ToolTip.text: "red-" + (modelData + 1)
                 }
             }
         }

@@ -1,4 +1,4 @@
-import QtQuick 2.13
+import QtQuick 2.12
 import Ant 1.0
 
 pragma Singleton
@@ -9,9 +9,11 @@ QtObject {
     property var palette: AntPalette{}
 
     property int appTheme: AppTheme.Light
+    property bool darkTheme: appTheme == AppTheme.Dark
 
     property color backgroundColor
     property color textColor
+    property color titleTextColor
     property color secondaryTextColor
     property color disableColor
     property color dividerColor
@@ -20,20 +22,22 @@ QtObject {
     function setTheme(theme){
         switch(theme){
         case AppTheme.Light:
-            backgroundColor = Qt.rgba(0, 0, 0, 0.04)
-            textColor = Qt.rgba(0, 0, 0, 0.85)
-            secondaryTextColor = Qt.rgba(0, 0, 0, 0.45)
-            disableColor = Qt.rgba(0, 0, 0, 0.25)
-            dividerColor = Qt.rgba(0, 0, 0, 0.06)
-            borderColor = Qt.rgba(0, 0, 0, 0.15)
+            backgroundColor = "#f5f5f5"
+            textColor = "#595959"
+            titleTextColor = "#262626"
+            secondaryTextColor = "#8c8c8c"
+            disableColor = "#bfbfbf"
+            dividerColor = "#f0f0f0"
+            borderColor = "#ececec"
             break;
         case AppTheme.Dark:
-            backgroundColor = Qt.rgba(1, 1, 1, 0.08)
-            textColor = Qt.rgba(1, 1, 1, 0.85)
-            secondaryTextColor = Qt.rgba(1, 1, 1, 0.45)
-            disableColor = Qt.rgba(1, 1, 1, 0.30)
-            dividerColor = Qt.rgba(1, 1, 1, 0.12)
-            borderColor = Qt.rgba(1, 1, 1, 0.20)
+            backgroundColor = "#262626"
+            textColor = "#acacac"
+            titleTextColor = "#d8d8d8"
+            secondaryTextColor = "#7d7d7d"
+            disableColor = "#5a5a5a"
+            dividerColor = "#303030"
+            borderColor = "#434343"
             break;
         }
         appTheme = theme

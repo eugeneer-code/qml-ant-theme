@@ -1,8 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>Ant/qmldir</file>
-        <file>Ant/AntTheme.qml</file>
-        <file>Ant/AntPalette.qml</file>
         <file>Ant/fonts/Roboto-Black.ttf</file>
         <file>Ant/fonts/Roboto-BlackItalic.ttf</file>
         <file>Ant/fonts/Roboto-Bold.ttf</file>
@@ -15,5 +12,9 @@
         <file>Ant/fonts/Roboto-Regular.ttf</file>
         <file>Ant/fonts/Roboto-Thin.ttf</file>
         <file>Ant/fonts/Roboto-ThinItalic.ttf</file>
+        <file>Ant/qmldir</file>
+        <file>Ant/AntTheme.qml</file>
+        <file>Ant/AntPalette.qml</file>
+        <file>Ant/Label.qml</file>
     </qresource>
 </RCC>

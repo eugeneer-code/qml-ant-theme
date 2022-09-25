@@ -31,8 +31,16 @@ Item {
             AntStyle.textStyle: TextStyle.H5
         }
         Label {
-            text: "Body"
-            AntStyle.textStyle: TextStyle.Body
+            text: "Body1"
+            AntStyle.textStyle: TextStyle.Body1
+        }
+        Label {
+            text: "Body2"
+            AntStyle.textStyle: TextStyle.Body2
+        }
+        Label {
+            text: "Body3"
+            AntStyle.textStyle: TextStyle.Body3
         }
         Label {
             text: "Footnote"

@@ -68,7 +68,9 @@ public:
         H3,
         H4,
         H5,
-        Body,
+        Body1,
+        Body2,
+        Body3,
         Footnote
     };
     Q_ENUM(Value)

@@ -5,7 +5,7 @@ using namespace AntDesign;
 
 AntStyle::AntStyle(QObject* parent)
     : QObject(parent)
-    , _textStyle(TextStyle::Body)
+    , _textStyle(TextStyle::Body1)
     , _controlColor(Accent::Default)
     , _buttonStyle(ButtonStyle::Secondary)
 {
