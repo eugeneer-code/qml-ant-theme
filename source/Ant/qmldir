@@ -1,0 +1,7 @@
+# Module name
+# Should correspond to import name
+module Ant
+
+singleton AntTheme 1.0 AntTheme.qml
+
+AntPalette 1.0 AntPalette.qml

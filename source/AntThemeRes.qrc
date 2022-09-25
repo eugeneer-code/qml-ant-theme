@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Ant/qmldir</file>
+        <file>Ant/AntTheme.qml</file>
+        <file>Ant/AntPalette.qml</file>
+        <file>Ant/fonts/Roboto-Black.ttf</file>
+        <file>Ant/fonts/Roboto-BlackItalic.ttf</file>
+        <file>Ant/fonts/Roboto-Bold.ttf</file>
+        <file>Ant/fonts/Roboto-BoldItalic.ttf</file>
+        <file>Ant/fonts/Roboto-Italic.ttf</file>
+        <file>Ant/fonts/Roboto-Light.ttf</file>
+        <file>Ant/fonts/Roboto-LightItalic.ttf</file>
+        <file>Ant/fonts/Roboto-Medium.ttf</file>
+        <file>Ant/fonts/Roboto-MediumItalic.ttf</file>
+        <file>Ant/fonts/Roboto-Regular.ttf</file>
+        <file>Ant/fonts/Roboto-Thin.ttf</file>
+        <file>Ant/fonts/Roboto-ThinItalic.ttf</file>
+    </qresource>
+</RCC>
