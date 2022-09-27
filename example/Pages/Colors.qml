@@ -1,9 +1,10 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
+import QtQuick 2.12
+import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
 import Ant 1.0
 
 Item {
-    Column {
+    ColumnLayout {
         anchors{
             fill: parent
             margins: 10
@@ -13,7 +14,7 @@ Item {
             text: "Basic colors"
         }
         Flow {
-            width: parent.width
+            Layout.preferredWidth: parent.width
             spacing: 8
             Repeater {
                 model: 13
@@ -34,10 +35,11 @@ Item {
         }
 
         Label {
+            Layout.topMargin: 12
             text: "Red accent"
         }
         Flow {
-            width: parent.width
+            Layout.preferredWidth: parent.width
             spacing: 8
             Repeater {
                 model: 10
@@ -55,6 +57,10 @@ Item {
                      ToolTip.text: "red-" + (modelData + 1)
                 }
             }
+        }
+
+        Item {
+            Layout.fillHeight: true
         }
     }
 }

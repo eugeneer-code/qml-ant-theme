@@ -16,5 +16,6 @@
         <file>Ant/AntTheme.qml</file>
         <file>Ant/AntPalette.qml</file>
         <file>Ant/Label.qml</file>
+        <file>Ant/Button.qml</file>
     </qresource>
 </RCC>

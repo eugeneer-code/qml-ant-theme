@@ -10,8 +10,8 @@ Item {
             margins: 10
         }
         Repeater{
-            model: [Accent.Blue, Accent.Red, Accent.Orange,
-                    Accent.Green, Accent.Cyan]
+            model: [AccentColor.Blue, AccentColor.Red, AccentColor.Orange,
+                    AccentColor.Green, AccentColor.Cyan]
             RowLayout{
                 Button{
                     text: "Secondary"
