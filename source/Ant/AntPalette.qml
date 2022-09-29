@@ -1,5 +1,6 @@
 import QtQuick 2.13
 import QtGraphicalEffects 1.13
+import AntTypes 1.0
 
 /*
  *  Colors definition
@@ -312,5 +313,22 @@ QtObject {
         8: "#f37fb7",
         9: "#f8a8cc",
         10: "#fad2e3"
+    }
+
+    function colorName(accent){
+        switch(accent){
+            case AccentColor.Red: return "red";
+            case AccentColor.Orange: return "orange";
+            case AccentColor.Gold: return "gold";
+            case AccentColor.Yellow: return "yellow";
+            case AccentColor.Lime: return "lime";
+            case AccentColor.Green: return "green";
+            case AccentColor.Cyan: return "cyan";
+            case AccentColor.Blue: return "blue";
+            case AccentColor.Geekblue: return "geekblue";
+            case AccentColor.Purple: return "purple";
+            case AccentColor.Magenta: return "magenta";
+            default: return "blue";
+        }
     }
 }

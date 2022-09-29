@@ -13,6 +13,7 @@ T.Button {
                              implicitContentHeight + topPadding + bottomPadding)
 
     property var accentColor: control.AntStyle.controlColor
+    property var buttonStyle: control.AntStyle.buttonStyle
 
     padding: 6
     horizontalPadding: padding + 2
@@ -39,8 +40,9 @@ T.Button {
         implicitWidth: 100
         implicitHeight: 40
         visible: !control.flat || control.down || control.checked || control.highlighted
-        color: Color.blend(control.checked || control.highlighted ? control.palette.dark : control.palette.button,
-                                                                    control.palette.mid, control.down ? 0.5 : 0.0)
+        color: AntTheme.buttonStyle.getBaseColor(buttonStyle, accentColor)
+       // color: Color.blend(control.checked || control.highlighted ? control.palette.dark : control.palette.button,
+       //                                                             control.palette.mid, control.down ? 0.5 : 0.0)
         border.color: control.palette.highlight
         border.width: control.visualFocus ? 2 : 0
     }

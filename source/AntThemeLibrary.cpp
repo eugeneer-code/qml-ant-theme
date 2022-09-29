@@ -18,10 +18,10 @@ void AntThemeLibrary::initLibrary(QQmlEngine *engine)
 	// Register C++ objects
     qmlRegisterUncreatableType<AntDesign::AntStyle>("Ant", 1, 0, "AntStyle", "Ant attached properties");
 
-    qmlRegisterUncreatableType<AntDesign::AppTheme>("Ant", 1, 0, "AppTheme", "enum class for theme");
-    qmlRegisterUncreatableType<AntDesign::Accent>("Ant", 1, 0, "AccentColor", "enum class for accent color");
-    qmlRegisterUncreatableType<AntDesign::ButtonStyle>("Ant", 1, 0, "ButtonSize", "enum class for button style");
-    qmlRegisterUncreatableType<AntDesign::TextStyle>("Ant", 1, 0, "TextStyle", "enum class for text style");
+    qmlRegisterUncreatableType<AntDesign::AppTheme>("AntTypes", 1, 0, "AppTheme", "enum class for theme");
+    qmlRegisterUncreatableType<AntDesign::Accent>("AntTypes", 1, 0, "AccentColor", "enum class for accent color");
+    qmlRegisterUncreatableType<AntDesign::ButtonStyle>("AntTypes", 1, 0, "ButtonStyle", "enum class for button style");
+    qmlRegisterUncreatableType<AntDesign::TextStyle>("AntTypes", 1, 0, "TextStyle", "enum class for text style");
 
 	qDebug() << "Ant theme init done";
 }

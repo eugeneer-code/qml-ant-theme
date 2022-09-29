@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Controls.impl 2.12
 import QtQuick.Templates 2.12 as T
 import Ant 1.0
+import AntTypes 1.0
 
 T.Label {
     id: control

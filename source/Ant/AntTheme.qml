@@ -1,15 +1,19 @@
 import QtQuick 2.12
-import Ant 1.0
+import AntTypes 1.0
 
 pragma Singleton
 
 QtObject {
-    id: styleObject
+    id: themeObject
 
     property var palette: AntPalette{}
+    property var buttonStyle: AntButtonStyle{
+        theme: themeObject
+    }
 
     property int appTheme: AppTheme.Light
-    property bool darkTheme: appTheme == AppTheme.Dark
+    readonly property bool darkTheme: appTheme == AppTheme.Dark
+    property var appAccent: AccentColor.Blue
 
     property color backgroundColor
     property color textColor
@@ -43,7 +47,20 @@ QtObject {
         appTheme = theme
     }
 
+    function setAccent(accent){
+        if(accent == AccentColor.Default) return; // Default can't be used as application accent color
+        appAccent = accent
+    }
+
    Component.onCompleted: setTheme(AppTheme.Light)
+
+    // returns selected accent color array
+   function getColor(accent){
+        if(accent == AccentColor.Default) accent = appAccent
+        var colorName = palette.colorName(accent)
+        if(darkTheme) colorName += "Dark"
+        return palette[colorName]
+   }
 
    // load fonts
    property FontLoader fontBlack: FontLoader{source: Qt.resolvedUrl("fonts/Roboto-Black.ttf")}

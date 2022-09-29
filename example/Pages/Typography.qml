@@ -1,6 +1,7 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import Ant 1.0
+import AntTypes 1.0
 
 Item {
     Column {
